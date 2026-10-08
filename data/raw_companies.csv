@@ -1,0 +1,51 @@
+company_id,company_name,ticker,sector,sub_sector,headquarters,founding_year,employee_count,target_lead_archetype,historical_conversion
+CORP_001,NovaScale AI Systems,NVSC,Technology,Enterprise AI & Cloud,"San Francisco, CA",2012,3099,high_growth,1
+CORP_002,Apex Cloud Dynamics,APXC,Technology,Hybrid Infrastructure,"Austin, TX",2007,2153,stable_mature,1
+CORP_003,OmniLogix Freight Tech,OLFT,Logistics,Autonomous Supply Chain,"Chicago, IL",2004,3330,high_growth,1
+CORP_004,Vanguard BioPharma,VGBP,Healthcare,Precision Therapeutics,"Boston, MA",2005,3281,high_growth,1
+CORP_005,Titanium Heavy Robotics,THRB,Industrial,Smart Manufacturing,"Detroit, MI",2004,3502,high_growth,1
+CORP_006,Solaris CleanGrid,SLCL,Clean Energy,Grid Scale Storage,"Denver, CO",2012,3852,stable_mature,0
+CORP_007,FinPulse Global Payments,FPGL,Financial Services,Cross-Border Settlement,"New York, NY",2009,678,stressed,0
+CORP_008,QuantumCore Security,QCSE,Technology,Zero-Trust Cybersecurity,"Seattle, WA",2019,1315,high_growth,1
+CORP_009,AeroDynamics Avionics,ADAV,Industrial,Commercial Aerospace Systems,"Dallas, TX",2003,5051,stable_mature,0
+CORP_010,Veritas Health Informatics,VRHI,Healthcare,Clinical AI Diagnostics,"Philadelphia, PA",2017,1707,stressed,0
+CORP_011,Nexus Retail Solutions,NXRS,Retail & E-Commerce,Omnichannel Point-of-Sale,"Atlanta, GA",2002,1654,stressed,0
+CORP_012,Hyperion Datacenters,HYDC,Technology,Edge Computing Facilities,"Phoenix, AZ",2011,2395,high_growth,1
+CORP_013,IronClad Supply Logistics,ICSL,Logistics,Cold-Chain Fleet Automation,"Minneapolis, MN",2005,8941,stable_mature,1
+CORP_014,Synapse BioEngineering,SNPB,Healthcare,Synthetic Biology Platforms,"San Diego, CA",2000,12012,stable_mature,1
+CORP_015,BlueRidge Commercial Banking,BRCB,Financial Services,Commercial Lending,"Charlotte, NC",2008,7618,stable_mature,0
+CORP_016,Zenith Agritech Systems,ZNAG,Clean Energy,Precision Irrigation & Soil AI,"Des Moines, IA",2019,3109,high_growth,1
+CORP_017,Cobalt Industrial Tools,CBIT,Industrial,Predictive Tooling Sensors,"Cleveland, OH",2016,12933,stable_mature,1
+CORP_018,CipherGuard Identity,CPGD,Technology,Decentralized IAM,"San Jose, CA",2002,9310,stable_mature,1
+CORP_019,Pacifica Marine Freight,PCMF,Logistics,Maritime Routing Systems,"Long Beach, CA",2019,2892,high_growth,1
+CORP_020,AuraCare Telehealth,ARCR,Healthcare,Virtual Care Infrastructure,"Nashville, TN",2009,1299,stressed,0
+CORP_021,Strata Wealth Tech,STWT,Financial Services,Automated Asset Allocation,"Miami, FL",2008,3878,high_growth,1
+CORP_022,PulseWave Telecommunications,PWTEL,Technology,5G Private Campus Networks,"Reston, VA",2014,2283,high_growth,1
+CORP_023,GeoThermal Frontier,GTFR,Clean Energy,Deep Well Baseload Power,"Reno, NV",2013,1554,stressed,0
+CORP_024,Kinetics Heavy Machining,KHM,Industrial,High-Tolerance Turbine Parts,"Pittsburgh, PA",1999,470,stressed,0
+CORP_025,Sovereign Trade Finance,STFN,Financial Services,Letter of Credit Automation,"New York, NY",2015,3015,high_growth,1
+CORP_026,MedMatrix Surgical,MMXS,Healthcare,Minimally Invasive Robotics,"San Jose, CA",2002,801,stressed,0
+CORP_027,FreightForge Warehousing,FFWH,Logistics,Automated Micro-Fulfillment,"Indianapolis, IN",2005,2196,high_growth,1
+CORP_028,EcoPack Materials Group,EPMG,Clean Energy,Biodegradable Packaging,"Portland, OR",2010,501,stressed,1
+CORP_029,OmniChannel Direct,OCDR,Retail & E-Commerce,AI Demand Forecasting,"Los Angeles, CA",2003,1962,stressed,1
+CORP_030,Vector Aerospace Avionics,VRAV,Industrial,Defense Navigation Sensors,"Huntsville, AL",2015,13189,stable_mature,1
+CORP_031,Starlight Satellite Networks,SLSN,Technology,LEO Satellite Broadband,"Boulder, CO",2003,7789,stable_mature,1
+CORP_032,Centurion Underwriting,CNUN,Financial Services,Parametric Risk Insurance,"Hartford, CT",2008,894,high_growth,1
+CORP_033,Integra Diagnostic Labs,INDL,Healthcare,High-Throughput Sequencing,"Raleigh, NC",2010,1582,high_growth,1
+CORP_034,Velocity Parcel Logistics,VPLG,Logistics,Last-Mile Drone Delivery,"Memphis, TN",2011,2695,stable_mature,0
+CORP_035,TerraFirma Solid Battery,TFSB,Clean Energy,Lithium-Sulfur Cells,"Salt Lake City, UT",2001,5575,stable_mature,0
+CORP_036,Foundry Precision Castings,FDRP,Industrial,Additive Metallurgy,"Milwaukee, WI",2020,3116,high_growth,1
+CORP_037,CloudNine SaaS ERP,CNERP,Technology,Mid-Market Financial Cloud,"San Mateo, CA",2012,1742,stressed,0
+CORP_038,Beacon Credit Union Tech,BCUT,Financial Services,Open Banking Core APIs,"Columbus, OH",2007,2601,high_growth,0
+CORP_039,CarePoint Specialty Clinics,CPSC,Healthcare,Outpatient Network Operations,"Houston, TX",2000,4629,high_growth,1
+CORP_040,Summit Cold Storage,SMCS,Logistics,Temperature-Controlled Hubs,"Kansas City, MO",2003,10524,stable_mature,1
+CORP_041,PureWater Desalination,PWDS,Clean Energy,Reverse Osmosis Systems,"San Antonio, TX",2003,11515,stable_mature,1
+CORP_042,ProCraft Industrial Coatings,PCIC,Industrial,Corrosion-Resistant Polymers,"Cincinnati, OH",2016,7422,stable_mature,0
+CORP_043,Synthetix Machine Vision,SYMV,Technology,Autonomous Quality Inspection,"Santa Clara, CA",2002,1818,stressed,0
+CORP_044,Meridian Merchant Services,MDMS,Financial Services,POS Hardware & Merchant Rails,"Scottsdale, AZ",2012,2089,high_growth,1
+CORP_045,GeneThera Biologics,GTBL,Healthcare,Adeno-Associated Virus Vectors,"Cambridge, MA",2018,3225,high_growth,1
+CORP_046,SwiftMile Intermodal,SMIM,Logistics,Rail-to-Truck Transloading,"Omaha, NE",2014,666,high_growth,1
+CORP_047,GreenVolt Hydrogen Systems,GVHS,Clean Energy,PEM Electrolyzer Stacks,"Houston, TX",2020,515,stressed,0
+CORP_048,Borealis Specialty Alloys,BSAL,Industrial,Nickel-Titanium Shape Memory,"Allentown, PA",2013,1328,stressed,0
+CORP_049,DataVault Enterprise Cloud,DVEC,Technology,Sovereign Cloud Data Warehousing,"Arlington, VA",2020,1217,high_growth,1
+CORP_050,Apex Capital Lending Group,ACLG,Financial Services,Asset-Backed Equipment Finance,"Chicago, IL",2006,946,high_growth,1

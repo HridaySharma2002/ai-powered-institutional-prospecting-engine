@@ -1,0 +1,123 @@
+// =============================================================================
+// AI-POWERED INSTITUTIONAL PROSPECTING ENGINE - DAX MEASURES
+// Table Name: 'Prospects'
+// =============================================================================
+
+// 1. LEAD VOLUME & COUNT MEASURES
+[Total Institutional Leads] = 
+COUNTROWS('Prospects')
+
+[High Conviction Targets] = 
+CALCULATE(
+    COUNTROWS('Prospects'),
+    'Prospects'[lead_probability_score] >= 75.0
+)
+
+[Tier 1 Strategic Alpha Leads] = 
+CALCULATE(
+    COUNTROWS('Prospects'),
+    'Prospects'[priority_tier] = "Tier 1: Strategic Alpha"
+)
+
+[Tier 2 High Conviction Leads] = 
+CALCULATE(
+    COUNTROWS('Prospects'),
+    'Prospects'[priority_tier] = "Tier 2: High Conviction"
+)
+
+[Disqualified Or Distressed Leads] = 
+CALCULATE(
+    COUNTROWS('Prospects'),
+    'Prospects'[qualification_status] = "Disqualified / On-Hold"
+)
+
+// 2. CONVERSION & QUALIFICATION RATES
+[Lead Qualification Rate %] = 
+DIVIDE(
+    CALCULATE(COUNTROWS('Prospects'), 'Prospects'[qualification_status] = "Qualified Target"),
+    [Total Institutional Leads],
+    0
+)
+
+[Average Lead Probability Score] = 
+AVERAGE('Prospects'[lead_probability_score])
+
+// 3. PIPELINE VALUE & FINANCIAL IMPACT MEASURES
+[Total Addressable Lead Revenue ($M)] = 
+SUM('Prospects'[annual_revenue_m])
+
+// Assumes an enterprise contract contract value model benchmarked at 0.15% of corporate revenue
+[Estimated Enterprise Pipeline Opportunity ($M)] = 
+SUMX(
+    'Prospects',
+    'Prospects'[annual_revenue_m] * 0.0015
+)
+
+// Pipeline value weighted by the ML Lead Probability Score
+[Probability-Weighted Pipeline ($M)] = 
+SUMX(
+    'Prospects',
+    ('Prospects'[annual_revenue_m] * 0.0015) * ('Prospects'[lead_probability_score] / 100.0)
+)
+
+[Average Revenue Growth Velocity %] = 
+AVERAGE('Prospects'[revenue_velocity_yoy])
+
+[Average Altman Z-Score] = 
+AVERAGE('Prospects'[altman_z_score])
+
+// 4. CREDIT HEALTH DISTRIBUTION
+[Safe Credit Profile Ratio %] = 
+DIVIDE(
+    CALCULATE(COUNTROWS('Prospects'), 'Prospects'[credit_risk_tier] = "Prime / Safe Zone"),
+    [Total Institutional Leads],
+    0
+)
+
+// 5. DYNAMIC ACCOUNT DOSSIER SELECTION (FOR INTERACTIVE CARDS)
+[Selected Account Name] = 
+SELECTEDVALUE('Prospects'[company_name], "Select an Account from Leaderboard")
+
+[Selected Account Ticker] = 
+SELECTEDVALUE('Prospects'[ticker], "-")
+
+[Selected Account Score] = 
+IF(
+    HASONEVALUE('Prospects'[company_name]),
+    FORMAT(SELECTEDVALUE('Prospects'[lead_probability_score]), "0.0") & " / 100",
+    "N/A"
+)
+
+[Selected Account AI Summary] = 
+SELECTEDVALUE(
+    'Prospects'[prospecting_summary],
+    "Click on any institutional lead in the table below to review the AI-synthesized prospecting dossier, balance sheet health, and market signals."
+)
+
+[Selected Account Talking Points] = 
+SELECTEDVALUE(
+    'Prospects'[talking_points],
+    "Select an account to view AI-generated C-suite conversation openers and talking points."
+)
+
+[Selected Account Pitch Angle] = 
+SELECTEDVALUE(
+    'Prospects'[pitch_angle],
+    "Select an account to view recommended strategic positioning."
+)
+
+[Selected Account Objection Handler] = 
+SELECTEDVALUE(
+    'Prospects'[objection_handler],
+    "Select an account to view proactive objection rebuttal strategy."
+)
+
+// 6. CONDITIONAL FORMATTING COLOR CODES (HEX)
+[Score Color Code] = 
+SWITCH(
+    TRUE(),
+    SELECTEDVALUE('Prospects'[lead_probability_score]) >= 80.0, "#107C41", // Deep Green (Alpha)
+    SELECTEDVALUE('Prospects'[lead_probability_score]) >= 65.0, "#0078D4", // Blue (High Conviction)
+    SELECTEDVALUE('Prospects'[lead_probability_score]) >= 45.0, "#F2C811", // Amber (Medium)
+    "#D83B01"                                                            // Red (Monitor)
+)

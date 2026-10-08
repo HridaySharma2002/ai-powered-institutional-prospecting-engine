@@ -1,0 +1,161 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "InstitutionalProspectsPowerBISchema",
+  "description": "Enterprise Data Schema for Power BI Ingestion - AI-Powered Institutional Prospecting Engine",
+  "type": "object",
+  "properties": {
+    "company_id": {
+      "type": "string",
+      "description": "Unique corporate identifier (Primary Key)",
+      "example": "CORP_001"
+    },
+    "company_name": {
+      "type": "string",
+      "description": "Full legal registered entity name",
+      "example": "NovaScale AI Systems"
+    },
+    "ticker": {
+      "type": "string",
+      "description": "Public ticker symbol or corporate acronym",
+      "example": "NVSC"
+    },
+    "sector": {
+      "type": "string",
+      "description": "Macro industrial sector classification",
+      "example": "Technology"
+    },
+    "sub_sector": {
+      "type": "string",
+      "description": "Granular domain vertical",
+      "example": "Enterprise AI & Cloud"
+    },
+    "headquarters": {
+      "type": "string",
+      "description": "Corporate headquarters geographical location",
+      "example": "San Francisco, CA"
+    },
+    "employee_count": {
+      "type": "integer",
+      "description": "Total headcount",
+      "example": 2840
+    },
+    "annual_revenue_m": {
+      "type": "number",
+      "description": "Trailing Twelve Months (TTM) Revenue in Millions USD",
+      "example": 680.50
+    },
+    "revenue_velocity_yoy": {
+      "type": "number",
+      "description": "Year-over-Year Revenue Growth Rate (%)",
+      "example": 48.25
+    },
+    "revenue_cagr_3yr": {
+      "type": "number",
+      "description": "3-Year Compound Annual Growth Rate (%)",
+      "example": 42.10
+    },
+    "ebitda_m": {
+      "type": "number",
+      "description": "Earnings Before Interest, Taxes, Depreciation & Amortization ($M)",
+      "example": 185.30
+    },
+    "net_margin": {
+      "type": "number",
+      "description": "Net Profit Margin percentage (%)",
+      "example": 16.40
+    },
+    "debt_to_equity": {
+      "type": "number",
+      "description": "Total Debt over Total Shareholders Equity (Solvency indicator)",
+      "example": 0.42
+    },
+    "current_ratio": {
+      "type": "number",
+      "description": "Current Assets over Current Liabilities (Liquidity indicator)",
+      "example": 2.85
+    },
+    "quick_ratio": {
+      "type": "number",
+      "description": "Liquid cash assets over current liabilities",
+      "example": 2.10
+    },
+    "altman_z_score": {
+      "type": "number",
+      "description": "Empirical Credit Health Proxy (>2.6 Safe, 1.1-2.6 Grey, <1.1 Distress)",
+      "example": 4.12
+    },
+    "credit_risk_tier": {
+      "type": "string",
+      "enum": ["Prime / Safe Zone", "Moderate Risk", "High Risk / Distress"],
+      "description": "Credit classification bucket"
+    },
+    "market_cap_m": {
+      "type": "number",
+      "description": "Market Capitalization or Enterprise Valuation ($M)",
+      "example": 5420.00
+    },
+    "market_cap_tier": {
+      "type": "string",
+      "enum": ["Small-Cap / Growth", "Mid-Market", "Large Enterprise"],
+      "description": "Capitalization size tier"
+    },
+    "event_type": {
+      "type": "string",
+      "description": "Primary market catalyst trigger type",
+      "example": "Capital Raise & Growth Equity"
+    },
+    "headline": {
+      "type": "string",
+      "description": "Recent corporate press release or SEC disclosure headline",
+      "example": "NovaScale AI Systems Secures $140M in Growth Financing..."
+    },
+    "signal_sentiment_score": {
+      "type": "number",
+      "description": "Normalized sentiment metric of market news (-1.0 to +1.0)",
+      "example": 0.90
+    },
+    "lead_probability_score": {
+      "type": "number",
+      "description": "Module A Machine Learning Output: Definitively calibrated conversion score (0-100)",
+      "example": 91.4
+    },
+    "priority_tier": {
+      "type": "string",
+      "enum": ["Tier 1: Strategic Alpha", "Tier 2: High Conviction", "Tier 3: Medium Priority", "Tier 4: Monitor / Nurture"],
+      "description": "Institutional sales routing tier"
+    },
+    "qualification_status": {
+      "type": "string",
+      "enum": ["Qualified Target", "Disqualified / On-Hold"],
+      "description": "Sales development binary qualification status"
+    },
+    "prospecting_summary": {
+      "type": "string",
+      "description": "Module B LangChain Output: Executive briefing synthesizing financials and catalyst events"
+    },
+    "market_signals": {
+      "type": "string",
+      "description": "Module B LangChain Output: Extracted high-impact signals and financial catalysts"
+    },
+    "talking_points": {
+      "type": "string",
+      "description": "Module B LangChain Output: Actionable C-suite conversation openers and probing questions"
+    },
+    "pitch_angle": {
+      "type": "string",
+      "description": "Module B LangChain Output: Recommended primary strategic value proposition"
+    },
+    "objection_handler": {
+      "type": "string",
+      "description": "Module B LangChain Output: Proactive rebuttal strategy tailored to financial posture"
+    }
+  },
+  "required": [
+    "company_id",
+    "company_name",
+    "lead_probability_score",
+    "priority_tier",
+    "prospecting_summary",
+    "talking_points"
+  ]
+}
