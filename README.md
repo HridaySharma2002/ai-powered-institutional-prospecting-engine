@@ -126,7 +126,6 @@ flowchart TD
 
 ```
 AI-Powered Institutional Prospecting Engine/
-├── .env.example                       # Environment configuration template
 ├── .gitignore                          # Standard git ignore definitions
 ├── requirements.txt                    # Python dependencies
 ├── run.py                              # Master CLI execution pipeline
@@ -190,9 +189,11 @@ pip install -r requirements.txt
 ```
 
 ### Step 3: Configure Environment
-Copy `.env.example` to `.env` and set your API key:
+Create `.env` file and set your API key:
 ```bash
-cp .env.example .env
+# Add your Google Gemini API key or Groq API key:
+GEMINI_API_KEY="your-gemini-api-key"
+GEMINI_MODEL=gemini-3.8-flash
 ```
 
 ### Step 4: Run the Complete Pipeline

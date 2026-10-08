@@ -19,6 +19,7 @@ wheels/
 *.egg-info/
 .installed.cfg
 *.egg
+.pytest_cache/
 
 # Virtual Environments
 venv/
@@ -28,7 +29,6 @@ ENV/
 
 # Environment Variables
 .env
-!.env.example
 
 # IDE
 .vscode/
@@ -40,6 +40,6 @@ ENV/
 .DS_Store
 Thumbs.db
 
-# Output artifacts (temporary)
+# Output artifacts
 *.log
 models/*.joblib
